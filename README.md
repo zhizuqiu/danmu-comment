@@ -1,18 +1,20 @@
 # danmu-comment
 js实现的弹幕评论插件，可嵌入任意网页，与基于nodejs的websocket实现的后端
+
 ## Features
  - 不用对原网页代码做任何修改，只需添加引用js
  - 快捷键召唤出评论框
  - 通过title区分评论区域
  - nodejs实现的后端
-## example
 
+## Example
 - [示例网页1][1]
 - [示例网页2][2]
 
 打开多个示例页面
 在相同title标签的示例网页中，将显示的相同的弹幕。
-## usage
+
+## Usage
 <1>`server.js`: 后端代码
  1. 要运行后端代码，nodejs是必须的：
 [https://nodejs.org/en/][3]
@@ -26,7 +28,6 @@ npm install node-uuid
 ``` ruleslanguage
 node server.js
 ```
-
 tip:运行之前你可能需要修改一下端口，默认是8002
  4. 可以使用[foreverjs/forever][4]去保证nodejs运行的连续性
 ``` ruleslanguage
