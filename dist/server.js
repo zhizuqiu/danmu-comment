@@ -2,12 +2,16 @@
  * Created by zhizuqiu on 2016/11/6.
  */
 
+/////////////////////////////
+var server_port = 8002;
+/////////////////////////////
+
 var WebSocket = require('ws');
 var WebSocketServer = WebSocket.Server,
-    wss = new WebSocketServer({ port: 8002 });
+    wss = new WebSocketServer({ port: server_port });
 var uuid = require('node-uuid');
 var clients = [];
-function wsSend(type, client_uuid, nickname, data) {
+function wsSend(type, client_uuid, data) {
     for (var i = 0; i < clients.length; i++) {
         var clientSocket = clients[i].ws;
         if (clientSocket.readyState === WebSocket.OPEN&&data['title']==clients[i].page) {
@@ -15,7 +19,6 @@ function wsSend(type, client_uuid, nickname, data) {
             if(data['danmu']){
                 clientSocket.send(JSON.stringify({
                     "type": type,
-                    "nickname": nickname,
                     "message": data['danmu'],
                     "time": time,
                 }));
@@ -26,14 +29,13 @@ function wsSend(type, client_uuid, nickname, data) {
 var clientIndex = 1;
 wss.on('connection', function(ws) {
     var client_uuid = uuid.v4();
-    var nickname = "匿名用户_" + clientIndex;
     ws.on('message', function(message) {
         var data = JSON.parse(message);
         if(data['type']=='login'){
             clientIndex += 1;
-            clients.push({ "id": client_uuid, "ws": ws, "nickname": nickname ,"page":data['title']});
+            clients.push({ "id": client_uuid , "ws": ws , "page":data['title']});
         }
-        wsSend("message", client_uuid, nickname, data);
+        wsSend("message", client_uuid, data);
     });
     var closeSocket = function(customMessage) {
         for (var i = 0; i < clients.length; i++) {
@@ -42,10 +44,10 @@ wss.on('connection', function(ws) {
                 if (customMessage) {
                     disconnect_message = customMessage;
                 } else {
-                    disconnect_message = nickname + " has disconnected";
+                    disconnect_message = "disconnected";
                 }
                 clients.splice(i, 1);
-                wsSend("logout", client_uuid, nickname, disconnect_message);
+                wsSend("logout", client_uuid, disconnect_message);
             }
         }
     };
