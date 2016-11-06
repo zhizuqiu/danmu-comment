@@ -15,7 +15,7 @@ js实现的弹幕评论插件，可嵌入任意网页，与基于nodejs的websoc
 在相同title标签的示例网页中，将显示的相同的弹幕。
 
 ## Usage
-`server.js`: 后端代码
+### `server.js`: 后端代码
 
 要运行后端代码，nodejs是必须的：
 [https://nodejs.org/en/][3]
@@ -39,7 +39,7 @@ tip:运行之前你可能需要修改一下端口，默认是8002
 forever start server.js
 ```
 
-`danmu-comment.js` ： 要引入网页的js
+### `danmu-comment.js` ： 要引入网页的js
 
 ``` vbscript-html
 <script src="danmu-comment.js"></script>
