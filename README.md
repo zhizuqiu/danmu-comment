@@ -16,19 +16,23 @@ js实现的弹幕评论插件，可嵌入任意网页，与基于nodejs的websoc
 
 ## Usage
 <1>`server.js`: 后端代码
+
  1. 要运行后端代码，nodejs是必须的：
 [https://nodejs.org/en/][3]
+
  2. 然后安装两个必须的模块：
 ``` ruleslanguage
 cd <server.js所在目录>
 npm install ws
 npm install node-uuid
 ```
+
  3. 运行后端：
 ``` ruleslanguage
 node server.js
 ```
 tip:运行之前你可能需要修改一下端口，默认是8002
+
  4. 可以使用[foreverjs/forever][4]去保证nodejs运行的连续性
 ``` ruleslanguage
 [sudo] npm install forever -g
