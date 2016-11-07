@@ -5,8 +5,9 @@ js实现的弹幕评论插件，可嵌入任意网页，与基于nodejs的websoc
  - 不用对原网页代码做任何修改，只需添加引用js
  - 快捷键召唤出评论框
  - 通过title区分评论区域
- - nodejs实现的后端
-
+ - 基于nodejs的websocket后端
+ - 提供docker服务端实现
+ 
 ## Example
 - [示例网页1][1]
 - [示例网页2][2]
@@ -38,6 +39,7 @@ tip:运行之前你可能需要修改一下端口，默认是8002
 [sudo] npm install forever -g
 forever start server.js
 ```
+#### 如果你的服务器有docker环境，这里提供了[docker版本][5]的服务端
 
 ### `danmu-comment.js` ： 要引入网页的js
 
@@ -54,9 +56,8 @@ var keycode = '13';		//调出评论框的键值，13为enter
 ```
 
 
-
-
   [1]: http://renfuheng.com/nodejs/danmu/
   [2]: http://renfuheng.com/nodejs/danmu/index2.html
   [3]: https://nodejs.org/en/
   [4]: https://github.com/foreverjs/forever
+  [5]: https://github.com/zhizuqiu/danmu-comment/tree/master/docker
