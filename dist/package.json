@@ -1,0 +1,8 @@
+{
+	"name":"danmu-comment",
+	"version":"1.0.1",
+	"dependencies":{
+		"ws":"^1.1.1",
+		"node-uuid":"^1.4.7"
+	}
+}
