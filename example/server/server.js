@@ -15,12 +15,14 @@ function wsSend(type, data) {
     for (var i = 0; i < clients.length; i++) {
         var clientSocket = clients[i].ws;
         if (clientSocket.readyState === WebSocket.OPEN&&data['title']==clients[i].page) {
-            var time = (new Date()).toLocaleDateString() + " " + (new Date()).toLocaleTimeString();
+            var time = Date.parse(new Date())/1000;
             if(data['danmu']){
                 clientSocket.send(JSON.stringify({
                     "type": type,
-                    "message": data['danmu']
+                    "message": data['danmu'],
+                    "time": time
                 }));
+                console.log(data);
             }
         }
     }
