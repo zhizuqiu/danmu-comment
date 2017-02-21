@@ -5,7 +5,7 @@
 ``` ruleslanguage
 docker pull zhizuqiu/danmu-comment
 ```
-内部端口为8002
+内部端口为8003
 
 ## 或者自己构建镜像
 这里以centos为例：
@@ -25,11 +25,11 @@ git clone https://github.com/zhizuqiu/danmu-comment.git
 cd danmu-comment/docker
 docker build -t="danmu-comment:v1" .
 ```
-tip： build之前，你可以通过修改Dockerfile文件，修改EXPOSE的端口，默认为8002
+tip： build之前，你可以通过修改Dockerfile文件，修改EXPOSE的端口，默认为8003
 
 然后就可以启动这个容器了
 
 ``` ruleslanguage
-docker run -d -p 8002:8002 danmu-comment:v1
+docker run -d -p 8003:8003 danmu-comment:v1
 ```
-其中8002:8002，前者的8002要与你客户端的端口对应，后者的8002就是之前Dockerfile中EXPOSE的端口
+其中8003:8003，前者的8003要与你客户端的端口对应，后者的8003就是之前Dockerfile中EXPOSE的端口
