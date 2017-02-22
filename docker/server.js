@@ -3,7 +3,7 @@
  */
 
 /////////////////////////////
-var server_port = 8002;
+var server_port = 8003;
 /////////////////////////////
 
 var WebSocket = require('ws');
