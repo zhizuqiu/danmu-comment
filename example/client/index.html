@@ -1,8 +1,24 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>danmu</title>
-    <script src="danmu-comment.js"></script>
+    <link rel="stylesheet" href="css/danmu-comment.css">
+    <script src="js/danmu-comment.js"></script>
 </head>
 <body>
+<script type="text/javascript">
+window.onload = function () {
+    var danmu = new Danmu_comment();
+    danmu.init("localhost","8003","1","1","13","0");
+    danmu.onEvent('onopen',function (event) {
+        console.log(event);
+    });
+    danmu.onEvent('onmessage',function (event) {
+        console.log(event);
+    });
+    danmu.onEvent('onclose',function (event) {
+        console.log(event);
+    });
+};
+</script>
 </body>
 </html>

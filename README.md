@@ -39,7 +39,7 @@ npm install node-uuid
 ``` ruleslanguage
 node server.js
 ```
-tip:运行之前你可能需要修改一下端口，默认是8002
+tip:运行之前你可能需要修改一下端口，默认是8003
 
 可以使用[foreverjs/forever][5]去保证nodejs运行的连续性
 ``` ruleslanguage
@@ -51,13 +51,13 @@ forever start server.js
 ### `danmu-comment.js` ： 要引入网页的js
 
 ``` vbscript-html
-<script src="danmu-comment.js"></script>
+<script src="js/danmu-comment.js"></script>
 ```
 tip:加入网页前确保title已设置，并修改danmu-comment.js中必要的配置参数：
 
 ``` ruleslanguage
 var server_ip = "localhost";	//服务端ip
-var server_port = "8002";	//端口
+var server_port = "8003";	//端口
 var danmu_speed = 1;	//弹幕速度
 var keycode = '13';		//调出评论框的键值，13为enter
 var danmu_style = 0;	//弹幕样式，现在提供两种，0为运动型，1为tip型

@@ -1,5 +1,7 @@
 /**
- * Created by zhizuqiu on 2016/11/6.
+ * @author zhizuqiu <994490929@qq.com>
+ * version: 1.1.0
+ * https://github.com/zhizuqiu/danmu-comment
  */
 
 /////////////////////////////
