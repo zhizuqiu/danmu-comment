@@ -2,7 +2,7 @@
 js实现的弹幕评论插件，可嵌入任意网页，与基于nodejs的websocket实现的后端
 
 ## Features
- - 不用对原网页代码做任何修改，只需添加引用danmu-comment.js文件
+ - 对原网页代码做少量修改，添加danmu-comment.js和danmu-comment.css文件
  - 快捷键召唤出评论框
  - 通过title标签区分评论域
  - 基于nodejs的websocket后端
@@ -48,20 +48,41 @@ forever start server.js
 ```
 #### 如果你的服务器有docker环境，这里提供了[docker版本][6]的服务端
 
+### `danmu-comment.css` ： 要引入网页的css
+
+``` vbscript-html
+<link rel="stylesheet" href="css/danmu-comment.css">
+```
+
 ### `danmu-comment.js` ： 要引入网页的js
 
 ``` vbscript-html
 <script src="js/danmu-comment.js"></script>
 ```
-tip:加入网页前确保title已设置，并修改danmu-comment.js中必要的配置参数：
+tip:加入网页前确保title已设置，并做必要的配置参数：
 
 ``` ruleslanguage
-var server_ip = "localhost";	//服务端ip
-var server_port = "8003";	//端口
-var danmu_speed = 1;	//弹幕速度
-var keycode = '13';		//调出评论框的键值，13为enter
-var danmu_style = 0;	//弹幕样式，现在提供两种，0为运动型，1为tip型
+window.onload = function () {
+    var danmu = new Danmu_comment();
+    danmu.init("localhost","8003","1","1","13","0");
+    danmu.onEvent('onopen',function (event) {
+        console.log(event);
+    });
+    danmu.onEvent('onmessage',function (event) {
+        console.log(event);
+    });
+    danmu.onEvent('onclose',function (event) {
+        console.log(event);
+    });
+};
 ```
+
+"localhost" : 服务端ip
+"8003" : 端口
+"1" : 用于区分房间
+"1" : 弹幕速度
+'13' : 调出评论框的键值，13为enter
+0 : 弹幕样式，现在提供两种，0为运动型，1为tip型
 
 
   [1]: http://renfuheng.com/nodejs/danmu/index.html
