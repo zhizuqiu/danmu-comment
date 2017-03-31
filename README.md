@@ -64,7 +64,7 @@ var danmu_style = 0;	//弹幕样式，现在提供两种，0为运动型，1为t
 ```
 
 
-  [1]: http://renfuheng.com/nodejs/danmu/
+  [1]: http://renfuheng.com/nodejs/danmu/index.html
   [2]: http://renfuheng.com/nodejs/danmu/index2.html
   [3]: http://renfuheng.com/nodejs/danmu/index3.html
   [4]: https://nodejs.org/en/
