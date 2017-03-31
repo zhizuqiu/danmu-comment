@@ -59,7 +59,7 @@ forever start server.js
 ``` vbscript-html
 <script src="js/danmu-comment.js"></script>
 ```
-tip:加入网页前确保title已设置，并做必要的配置参数：
+tip:并做必要的参数配置：
 
 ``` ruleslanguage
 window.onload = function () {
@@ -77,12 +77,12 @@ window.onload = function () {
 };
 ```
 
-"localhost" : 服务端ip
-"8003" : 端口
-"1" : 用于区分房间
-"1" : 弹幕速度
-'13' : 调出评论框的键值，13为enter
-0 : 弹幕样式，现在提供两种，0为运动型，1为tip型
+ - "localhost" : 服务端ip; 
+ - "8003" : 端口; 
+ - "1" : 用于区分房间; 
+ - "1" : 弹幕速度;
+ -  '13' : 调出评论框的键值，13为enter; 
+ -  "0" : 弹幕样式，现在提供两种，0为运动型，1为tip型;
 
 
   [1]: http://renfuheng.com/nodejs/danmu/index.html
