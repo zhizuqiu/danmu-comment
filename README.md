@@ -18,9 +18,14 @@ js实现的弹幕评论插件，可嵌入任意网页，与基于nodejs的websoc
 样式二
 
  - [示例网页1][3]
- 
-打开多个示例页面
-在相同title标签的示例网页中，将显示的相同的弹幕。
+
+测试方式：
+
+打开多个相同的示例页面，演示弹幕交流
+
+打开多个不同的示例页面，演示弹幕隔离
+
+打开不同样式的示例页面，演示样式差异
 
 ## Usage
 ### `server.js`: 后端代码
@@ -85,9 +90,9 @@ window.onload = function () {
  -  "0" : 弹幕样式，现在提供两种，0为运动型，1为tip型;
 
 
-  [1]: http://renfuheng.com/nodejs/danmu/index.html
-  [2]: http://renfuheng.com/nodejs/danmu/index2.html
-  [3]: http://renfuheng.com/nodejs/danmu/index3.html
+  [1]: http://45.78.53.154/nodejs/danmu/index.html
+  [2]: http://45.78.53.154/nodejs/danmu/index2.html
+  [3]: http://45.78.53.154/nodejs/danmu/index3.html
   [4]: https://nodejs.org/en/
   [5]: https://github.com/foreverjs/forever
   [6]: https://github.com/zhizuqiu/danmu-comment/tree/master/docker
