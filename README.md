@@ -90,9 +90,9 @@ window.onload = function () {
  -  "0" : 弹幕样式，现在提供两种，0为运动型，1为tip型;
 
 
-  [1]: http://45.78.53.154/nodejs/danmu/index.html
-  [2]: http://45.78.53.154/nodejs/danmu/index2.html
-  [3]: http://45.78.53.154/nodejs/danmu/index3.html
+  [1]: http://45.77.135.111/danmu/index.html
+  [2]: http://45.77.135.111/danmu/index2.html
+  [3]: http://45.77.135.111/danmu/index3.html
   [4]: https://nodejs.org/en/
   [5]: https://github.com/foreverjs/forever
   [6]: https://github.com/zhizuqiu/danmu-comment/tree/master/docker

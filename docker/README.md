@@ -4,6 +4,8 @@
 
 ``` ruleslanguage
 docker pull zhizuqiu/danmu-comment
+
+docker run -d -p 8003:8003 --restart=always zhizuqiu/danmu-comment
 ```
 内部端口为8003
 
