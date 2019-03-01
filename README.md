@@ -1,6 +1,8 @@
 # danmu-comment
 js实现的弹幕评论插件，可嵌入任意网页，与基于nodejs的websocket实现的后端
 
+个人的小玩具，请不要用于生产
+
 ## Features
  - 对原网页代码做少量修改，添加danmu-comment.js和danmu-comment.css文件
  - 快捷键召唤出评论框
