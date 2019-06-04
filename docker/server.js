@@ -24,7 +24,6 @@ function wsSend(type, data) {
                     "message": data['danmu'],
                     "time": time
                 }));
-                console.log(data);
             }
         }
     }
