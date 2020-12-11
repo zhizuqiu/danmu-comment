@@ -176,7 +176,7 @@ Danmu_comment.prototype = {
         var parent = document.getElementsByTagName("body")[0];
         var div = document.createElement("div");
         div.setAttribute("id", 'alert_' + danmu['time']);
-        div.setAttribute("class","danmu-base danmu-style-0");
+        div.setAttribute("class","danmu-base danmu-style-1");
         div.setAttribute("style", " left:" + w_ram + "px; top:" + h_ram + "px;");
         div.innerHTML = danmu['message'];
         document.getElementById('insert_danmu').value = "";
